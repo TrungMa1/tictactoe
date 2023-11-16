@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tictactoever2.TicTacToeController">
+    <TitledPane animated="false" collapsible="false" prefHeight="512.0" prefWidth="450.0" text="Tic Tac Toe">
+        <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="497.0" prefWidth="487.0">
+                <children>
+                    <Button fx:id="newRoundButton" layoutX="330.0" layoutY="445.0" mnemonicParsing="false" onAction="#newRoundButtonDo" prefHeight="31.0" prefWidth="107.0" text="New Round">
+                        <font>
+                            <Font size="15.0" />
+                        </font>
+                    </Button>
+                    <Line endX="290.0" layoutX="165.0" layoutY="432.0" startX="-172.0" strokeWidth="5.0" />
+                    <Line endX="283.0" layoutX="165.0" layoutY="2.0" startX="-172.0" strokeWidth="5.0" />
+                    <Line endX="260.0" layoutX="403.0" layoutY="216.0" rotate="90.0" startX="-172.0" strokeWidth="5.0" />
+                    <Line endX="260.0" layoutX="-43.0" layoutY="216.0" rotate="90.0" startX="-172.0" strokeWidth="5.0" />
+                    <Button fx:id="button5" layoutX="146.0" layoutY="136.0" mnemonicParsing="false" onAction="#handleButtonClick" prefHeight="149.0" prefWidth="155.0">
+                        <font>
+                            <Font size="60.0" />
+                        </font></Button>
+                    <Button fx:id="button2" layoutX="144.0" layoutY="4.0" mnemonicParsing="false" onAction="#handleButtonClick" prefHeight="132.0" prefWidth="159.0">
+                        <font>
+                            <Font size="60.0" />
+                        </font></Button>
+                    <Button fx:id="button8" layoutX="142.0" layoutY="285.0" mnemonicParsing="false" onAction="#handleButtonClick" prefHeight="145.0" prefWidth="163.0">
+                        <font>
+                            <Font size="60.0" />
+                        </font></Button>
+                    <Button fx:id="button7" layoutX="3.0" layoutY="285.0" mnemonicParsing="false" onAction="#handleButtonClick" prefHeight="145.0" prefWidth="141.0">
+                        <font>
+                            <Font size="60.0" />
+                        </font></Button>
+                    <Button fx:id="button9" layoutX="304.0" layoutY="284.0" mnemonicParsing="false" onAction="#handleButtonClick" prefHeight="146.0" prefWidth="140.0">
+                        <font>
+                            <Font size="60.0" />
+                        </font></Button>
+                    <Button fx:id="button4" layoutX="3.0" layoutY="136.0" mnemonicParsing="false" onAction="#handleButtonClick" prefHeight="149.0" prefWidth="141.0">
+                        <font>
+                            <Font size="60.0" />
+                        </font></Button>
+                    <Button fx:id="button1" layoutX="3.0" layoutY="3.0" mnemonicParsing="false" onAction="#handleButtonClick" prefHeight="134.0" prefWidth="141.0">
+                        <font>
+                            <Font size="60.0" />
+                        </font></Button>
+                    <Button fx:id="button3" layoutX="303.0" layoutY="4.0" mnemonicParsing="false" onAction="#handleButtonClick" prefHeight="132.0" prefWidth="141.0">
+                        <font>
+                            <Font size="60.0" />
+                        </font></Button>
+                    <Button fx:id="button6" layoutX="303.0" layoutY="136.0" mnemonicParsing="false" onAction="#handleButtonClick" prefHeight="150.0" prefWidth="141.0">
+                        <font>
+                            <Font size="60.0" />
+                        </font></Button>
+                    <Button fx:id="resetScoreButton" layoutX="13.0" layoutY="445.0" mnemonicParsing="false" onAction="#resetScoreButtonDo" prefHeight="31.0" prefWidth="107.0" text="Reset Score">
+                        <font>
+                            <Font size="15.0" />
+                        </font>
+                    </Button>
+                    <Text fx:id="playerXPointsText" layoutX="180.0" layoutY="458.0" text="Player X Points: 0" />
+                    <Text fx:id="playerOPointsText" layoutX="180.0" layoutY="473.0" text="Player O Points: 0" />
+                </children>
+            </AnchorPane>
+        </content>
+        <font>
+            <Font name="System Bold Italic" size="11.0" />
+        </font>
+    </TitledPane>
+    <Line endX="230.0" layoutX="212.0" layoutY="160.0" startX="-205.0" strokeLineCap="ROUND" strokeWidth="7.0">
+        <stroke>
+            <LinearGradient cycleMethod="REFLECT" endX="0.5165876777251185" endY="1.0">
+                <stops>
+                    <Stop>
+                        <color>
+                            <Color red="0.1882352977991104" green="1.0" />
+                        </color>
+                    </Stop>
+                    <Stop offset="1.0">
+                        <color>
+                            <Color />
+                        </color>
+                    </Stop>
+                </stops>
+            </LinearGradient>
+        </stroke>
+    </Line>
+    <Line endX="230.0" layoutX="212.0" layoutY="310.0" startX="-205.0" strokeLineCap="ROUND" strokeWidth="7.0">
+        <stroke>
+            <LinearGradient cycleMethod="REFLECT" endX="0.5165876777251185" endY="1.0">
+                <stops>
+                    <Stop>
+                        <color>
+                            <Color red="0.1882352977991104" green="1.0" />
+                        </color>
+                    </Stop>
+                    <Stop offset="1.0">
+                        <color>
+                            <Color />
+                        </color>
+                    </Stop>
+                </stops>
+            </LinearGradient>
+        </stroke>
+    </Line>
+    <Line endX="240.0" layoutX="275.0" layoutY="242.0" rotate="90.0" startX="-180.0" strokeLineCap="ROUND" strokeWidth="7.0">
+        <stroke>
+            <LinearGradient cycleMethod="REFLECT" endX="0.5165876777251185" endY="1.0">
+                <stops>
+                    <Stop>
+                        <color>
+                            <Color red="0.1882352977991104" green="1.0" />
+                        </color>
+                    </Stop>
+                    <Stop offset="1.0">
+                        <color>
+                            <Color />
+                        </color>
+                    </Stop>
+                </stops>
+            </LinearGradient>
+        </stroke>
+    </Line>
+    <Line endX="240.0" layoutX="115.0" layoutY="242.0" rotate="90.0" startX="-180.0" strokeLineCap="ROUND" strokeWidth="7.0">
+        <stroke>
+            <LinearGradient cycleMethod="REFLECT" endX="0.5165876777251185" endY="1.0">
+                <stops>
+                    <Stop>
+                        <color>
+                            <Color red="0.1882352977991104" green="1.0" />
+                        </color>
+                    </Stop>
+                    <Stop offset="1.0">
+                        <color>
+                            <Color />
+                        </color>
+                    </Stop>
+                </stops>
+            </LinearGradient>
+        </stroke>
+    </Line>
+</Pane>
