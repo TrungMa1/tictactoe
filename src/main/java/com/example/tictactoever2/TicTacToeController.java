@@ -36,6 +36,8 @@ public class TicTacToeController {
     private void newRoundButtonDo() {
         updateView();
         model.resetBoard();
+        model.setCurrentPlayer('X');
+        model.setGameEnded(false);
     }
 
     @FXML
@@ -43,6 +45,8 @@ public class TicTacToeController {
         updateView();
         model.resetBoard();
         model.clearPoints();
+        model.setCurrentPlayer('X');
+        model.setGameEnded(false);
     }
 
     @FXML

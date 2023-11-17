@@ -9,6 +9,7 @@ public class TicTacToeModel {
 
     private int[] board;
     private char currentPlayer;
+    private String winner;
     private boolean gameEnded;
     private int playerXPoints;
     private int playerOPoints;
@@ -48,20 +49,17 @@ public class TicTacToeModel {
         return true;
     }
 
-    private boolean checkWinner() {
-        // Checkar horisontelt
+    public boolean checkWinner() {
         for (int i = 0; i < 9; i += 3) {
             if (board[i] != 0 && board[i] == board[i + 1] && board[i] == board[i + 2]) {
                 return true;
             }
         }
-        // Checkar vertikalt
         for (int i = 0; i < 3; i++) {
             if (board[i] != 0 && board[i] == board[i + 3] && board[i] == board[i + 6]) {
                 return true;
             }
         }
-        // Checkar diagonalt
         if (board[0] != 0 && board[0] == board[4] && board[0] == board[8]) {
             return true;
         }
@@ -70,14 +68,12 @@ public class TicTacToeModel {
 
     public void declareWinner() {
         if (checkWinner()) {
+            winner = String.valueOf(currentPlayer);
             System.out.println("Player " + currentPlayer + " wins!");
             givePoints();
             gameEnded = true;
         } else if (!isBoardFull()) {
             switchPlayer();
-            if (currentPlayer == PLAYER_O) {
-                makeComputerMove();
-            }
         } else {
             handleDraw();
         }
@@ -118,7 +114,7 @@ public class TicTacToeModel {
         setPlayerOPoints(0);
     }
 
-    public void resetBoard(){
+    public void resetBoard() {
         initializeBoard();
         gameEnded = false;
     }
@@ -150,5 +146,16 @@ public class TicTacToeModel {
     public int[] getBoard() {
         return board;
     }
-}
 
+    public String getWinner() {
+        return winner;
+    }
+
+    public void setCurrentPlayer(char currentPlayer) {
+        this.currentPlayer = currentPlayer;
+    }
+
+    public void setGameEnded(boolean gameEnded) {
+        this.gameEnded = gameEnded;
+    }
+}
